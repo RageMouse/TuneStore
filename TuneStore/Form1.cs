@@ -12,6 +12,8 @@ namespace TuneStore
 {
     public partial class Form1 : Form
     {
+        System.Media.SoundPlayer player =
+        new System.Media.SoundPlayer();
         public Form1()
         {
             Thread t = new Thread(new ThreadStart(splashscreen));
@@ -50,11 +52,14 @@ namespace TuneStore
 
         private void playSound(string path)
         {
-            System.Media.SoundPlayer player =
-            new System.Media.SoundPlayer();
             player.SoundLocation = path;
             player.Load();
             player.Play();
+        }
+
+        private void stopSound()
+        {
+            player.Stop();
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -63,6 +68,12 @@ namespace TuneStore
             playSound(textBox1.Text);
             string fileName = textBox1.Text.Substring(25);
             tbTuneName.Text = fileName;
+        }
+
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            stopSound();
         }
 
     }
