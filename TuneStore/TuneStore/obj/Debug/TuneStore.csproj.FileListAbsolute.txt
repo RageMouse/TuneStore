@@ -17,3 +17,10 @@ C:\Users\jan\Documents\Visual Studio 2008\Projects\TuneStore\TuneStore\obj\Debug
 C:\Users\jan\Documents\Visual Studio 2008\Projects\TuneStore\TuneStore\obj\Debug\TuneStore.csproj.GenerateResource.Cache
 C:\Users\jan\Documents\Visual Studio 2008\Projects\TuneStore\TuneStore\bin\Debug\TuneStore.exe
 C:\Users\jan\Documents\Visual Studio 2008\Projects\TuneStore\TuneStore\bin\Debug\TuneStore.pdb
+C:\Users\Dennis\Documents\GitHub\TuneStore\TuneStore\TuneStore\bin\Debug\TuneStore.exe
+C:\Users\Dennis\Documents\GitHub\TuneStore\TuneStore\TuneStore\bin\Debug\TuneStore.pdb
+C:\Users\Dennis\Documents\GitHub\TuneStore\TuneStore\TuneStore\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dennis\Documents\GitHub\TuneStore\TuneStore\TuneStore\obj\Debug\TuneStore.Form1.resources
+C:\Users\Dennis\Documents\GitHub\TuneStore\TuneStore\TuneStore\obj\Debug\TuneStore.Properties.Resources.resources
+C:\Users\Dennis\Documents\GitHub\TuneStore\TuneStore\TuneStore\obj\Debug\TuneStore.splashscreen.resources
+C:\Users\Dennis\Documents\GitHub\TuneStore\TuneStore\TuneStore\obj\Debug\TuneStore.csproj.GenerateResource.Cache
