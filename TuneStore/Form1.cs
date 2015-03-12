@@ -57,7 +57,7 @@ namespace TuneStore
             player.Play();
         }
 
-        private void stopSound()
+        private void stopSound( )
         {
             player.Stop();
         }
