@@ -1,0 +1,8 @@
+C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\bin\Debug\TuneStore.exe
+C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\bin\Debug\TuneStore.pdb
+C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\Debug\TuneStore.Form1.resources
+C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\Debug\TuneStore.Properties.Resources.resources
+C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\Debug\TuneStore.csproj.GenerateResource.Cache
+C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\Debug\TuneStore.exe
+C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\Debug\TuneStore.pdb
