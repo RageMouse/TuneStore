@@ -58,6 +58,7 @@
             this.btnSet = new System.Windows.Forms.Button();
             this.tbTuneLocation = new System.Windows.Forms.TextBox();
             this.tbTuneName = new System.Windows.Forms.TextBox();
+            this.sfdSaveAs = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.gbOverlay.SuspendLayout();
             this.SuspendLayout();
@@ -166,13 +167,13 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.aboutToolStripMenuItem.Text = "About.";
             // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
             this.helpToolStripMenuItem1.Text = "Help.";
             // 
             // gbOverlay
@@ -368,6 +369,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.SaveFileDialog sfdSaveAs;
     }
 }
 

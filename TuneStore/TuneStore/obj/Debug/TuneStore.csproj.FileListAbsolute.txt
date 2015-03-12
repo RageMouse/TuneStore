@@ -6,3 +6,5 @@ C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\
 C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\Debug\TuneStore.csproj.GenerateResource.Cache
 C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\Debug\TuneStore.exe
 C:\Users\Dennis\Desktop\School\Applicaties Programmeren\TuneStore\TuneStore\obj\Debug\TuneStore.pdb
+C:\Users\Dennis\Documents\GitHub\TuneStore\TuneStore\TuneStore\obj\Debug\TuneStore.exe
+C:\Users\Dennis\Documents\GitHub\TuneStore\TuneStore\TuneStore\obj\Debug\TuneStore.pdb
