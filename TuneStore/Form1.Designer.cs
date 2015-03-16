@@ -45,6 +45,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gbOverlay = new System.Windows.Forms.GroupBox();
+            this.btnStop = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@
             this.tbTuneLocation = new System.Windows.Forms.TextBox();
             this.tbTuneName = new System.Windows.Forms.TextBox();
             this.sfdSaveAs = new System.Windows.Forms.SaveFileDialog();
-            this.btnStop = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gbOverlay.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(635, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            
             // 
             // tSToolStripMenuItem
             // 
@@ -200,6 +201,17 @@
             this.gbOverlay.Size = new System.Drawing.Size(610, 221);
             this.gbOverlay.TabIndex = 1;
             this.gbOverlay.TabStop = false;
+           
+            // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(300, 93);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(97, 23);
+            this.btnStop.TabIndex = 14;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // label5
             // 
@@ -323,16 +335,6 @@
             this.tbTuneName.TabIndex = 0;
             this.tbTuneName.Text = "Tune Name.";
             // 
-            // btnStop
-            // 
-            this.btnStop.Location = new System.Drawing.Point(300, 93);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(97, 23);
-            this.btnStop.TabIndex = 14;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,7 +346,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "TuneStore";
-          
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.gbOverlay.ResumeLayout(false);
