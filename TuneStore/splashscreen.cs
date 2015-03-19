@@ -14,6 +14,9 @@ namespace TuneStore
         public splashscreen()
         {
             InitializeComponent();
+
+            StartPosition = FormStartPosition.CenterScreen;
         }
+
     }
 }

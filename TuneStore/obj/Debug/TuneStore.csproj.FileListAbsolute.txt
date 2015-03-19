@@ -34,3 +34,4 @@ C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\obj\Debug\Tune
 C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\obj\Debug\TuneStore.csproj.GenerateResource.Cache
 C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\bin\Debug\TuneStore.exe
 C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\bin\Debug\TuneStore.pdb
+C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\obj\Debug\TuneStore.splashscreen.resources
