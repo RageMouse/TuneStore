@@ -1,6 +1,6 @@
-﻿namespace TuneStore
+﻿namespace splashscreen
 {
-    partial class splashscreen
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "splashscreen";
+            this.Text = "Form1";
         }
 
         #endregion
     }
 }
+

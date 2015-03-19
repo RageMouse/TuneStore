@@ -52,15 +52,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbTunes = new System.Windows.Forms.RichTextBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbSong = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSet = new System.Windows.Forms.Button();
             this.tbTuneLocation = new System.Windows.Forms.TextBox();
             this.tbTuneName = new System.Windows.Forms.TextBox();
             this.sfdSaveAs = new System.Windows.Forms.SaveFileDialog();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.gbOverlay.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +80,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(635, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            
             // 
             // tSToolStripMenuItem
             // 
@@ -92,13 +92,14 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveAsToolStripMenuItem});
+            this.saveAsToolStripMenuItem,
+            this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -106,8 +107,9 @@
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveAsToolStripMenuItem.Text = "Save as...";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -120,7 +122,7 @@
             // playlistToolStripMenuItem
             // 
             this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
-            this.playlistToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.playlistToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.playlistToolStripMenuItem.Text = "Playlist.";
             // 
             // viewToolStripMenuItem
@@ -134,7 +136,7 @@
             // playlistsToolStripMenuItem
             // 
             this.playlistsToolStripMenuItem.Name = "playlistsToolStripMenuItem";
-            this.playlistsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.playlistsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.playlistsToolStripMenuItem.Text = "Playlists.";
             // 
             // toolsToolStripMenuItem
@@ -188,10 +190,10 @@
             this.gbOverlay.Controls.Add(this.label3);
             this.gbOverlay.Controls.Add(this.comboBox1);
             this.gbOverlay.Controls.Add(this.label2);
-            this.gbOverlay.Controls.Add(this.richTextBox1);
+            this.gbOverlay.Controls.Add(this.rtbTunes);
             this.gbOverlay.Controls.Add(this.btnPlay);
             this.gbOverlay.Controls.Add(this.label1);
-            this.gbOverlay.Controls.Add(this.textBox1);
+            this.gbOverlay.Controls.Add(this.tbSong);
             this.gbOverlay.Controls.Add(this.btnAdd);
             this.gbOverlay.Controls.Add(this.btnSet);
             this.gbOverlay.Controls.Add(this.tbTuneLocation);
@@ -201,11 +203,11 @@
             this.gbOverlay.Size = new System.Drawing.Size(610, 221);
             this.gbOverlay.TabIndex = 1;
             this.gbOverlay.TabStop = false;
-           
+            
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(300, 93);
+            this.btnStop.Location = new System.Drawing.Point(326, 93);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(97, 23);
             this.btnStop.TabIndex = 14;
@@ -264,17 +266,18 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Tunes in stock.";
             // 
-            // richTextBox1
+            // rtbTunes
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(9, 143);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(590, 72);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.rtbTunes.Location = new System.Drawing.Point(9, 143);
+            this.rtbTunes.Name = "rtbTunes";
+            this.rtbTunes.ReadOnly = true;
+            this.rtbTunes.Size = new System.Drawing.Size(590, 72);
+            this.rtbTunes.TabIndex = 7;
+            this.rtbTunes.Text = "";
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(199, 94);
+            this.btnPlay.Location = new System.Drawing.Point(223, 93);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(96, 23);
             this.btnPlay.TabIndex = 6;
@@ -291,16 +294,16 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Current Selection.";
             // 
-            // textBox1
+            // tbSong
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 20);
-            this.textBox1.TabIndex = 4;
+            this.tbSong.Location = new System.Drawing.Point(7, 96);
+            this.tbSong.Name = "tbSong";
+            this.tbSong.Size = new System.Drawing.Size(210, 20);
+            this.tbSong.TabIndex = 4;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(301, 45);
+            this.btnAdd.Location = new System.Drawing.Point(326, 45);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(96, 23);
             this.btnAdd.TabIndex = 3;
@@ -310,7 +313,7 @@
             // 
             // btnSet
             // 
-            this.btnSet.Location = new System.Drawing.Point(198, 45);
+            this.btnSet.Location = new System.Drawing.Point(223, 45);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(97, 23);
             this.btnSet.TabIndex = 2;
@@ -322,7 +325,7 @@
             this.tbTuneLocation.Location = new System.Drawing.Point(7, 47);
             this.tbTuneLocation.Name = "tbTuneLocation";
             this.tbTuneLocation.ReadOnly = true;
-            this.tbTuneLocation.Size = new System.Drawing.Size(185, 20);
+            this.tbTuneLocation.Size = new System.Drawing.Size(210, 20);
             this.tbTuneLocation.TabIndex = 1;
             this.tbTuneLocation.Text = "Tune Location.";
             // 
@@ -331,9 +334,16 @@
             this.tbTuneName.Location = new System.Drawing.Point(7, 20);
             this.tbTuneName.Name = "tbTuneName";
             this.tbTuneName.ReadOnly = true;
-            this.tbTuneName.Size = new System.Drawing.Size(390, 20);
+            this.tbTuneName.Size = new System.Drawing.Size(412, 20);
             this.tbTuneName.TabIndex = 0;
             this.tbTuneName.Text = "Tune Name.";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -369,13 +379,13 @@
         private System.Windows.Forms.TextBox tbTuneLocation;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbSong;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSet;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbTunes;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playlistToolStripMenuItem;
@@ -389,6 +399,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.SaveFileDialog sfdSaveAs;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
     }
 }
 

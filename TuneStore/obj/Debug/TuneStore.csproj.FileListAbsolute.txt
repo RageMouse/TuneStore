@@ -31,7 +31,6 @@ C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\obj\Debug\Tune
 C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\obj\Debug\TuneStore.Form1.resources
 C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\obj\Debug\TuneStore.Properties.Resources.resources
-C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\obj\Debug\TuneStore.splashscreen.resources
 C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\obj\Debug\TuneStore.csproj.GenerateResource.Cache
 C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\bin\Debug\TuneStore.exe
 C:\Users\jan\Documents\GitHub\tunestoredennis\TuneStore\TuneStore\bin\Debug\TuneStore.pdb

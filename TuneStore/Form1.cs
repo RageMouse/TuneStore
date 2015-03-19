@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
 
 namespace TuneStore
 {
     public partial class Form1 : Form
     {
+        int nr = 0;
+
+        SongClass[] obSong = new SongClass[100];    
+
         System.Media.SoundPlayer player =
         new System.Media.SoundPlayer();
         public Form1()
@@ -37,15 +42,27 @@ namespace TuneStore
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 string path = dialog.FileName;
-                
+                string FilenameFull = System.IO.Path.GetFileName(path);
+                int index = FilenameFull.IndexOf('.');
+                string FileNameWithoutExtension = FilenameFull.Substring(0, index);
+
+            
                 if (comboBox1.Items.Contains(path))
                 {
                     MessageBox.Show("this song is already in the list!");
                 }
                 else
                 {
-                    richTextBox1.AppendText(path);
+                    rtbTunes.AppendText(path);
+                    rtbTunes.AppendText("\n");
                     comboBox1.Items.Add(path);
+                    
+
+                    obSong[nr] = new SongClass();
+                    obSong[nr].SongLocation = path;
+                    obSong[nr].SongName = FileNameWithoutExtension;
+                    nr++;
+                    
                 }
             }
         }
@@ -64,10 +81,14 @@ namespace TuneStore
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            textBox1.Text = comboBox1.Text;
-            playSound(textBox1.Text);
-            string fileName = textBox1.Text.Substring(25);
-            tbTuneName.Text = fileName;
+            tbSong.Text = comboBox1.Text;
+            playSound(tbSong.Text);
+            string FileName = System.IO.Path.GetFileName(tbSong.Text);
+            int index2 = FileName.IndexOf('.');
+            string TuneName = FileName.Substring(0, index2);
+            tbTuneName.Text = TuneName;
+           
+
         }
 
 
@@ -75,6 +96,55 @@ namespace TuneStore
         {
             stopSound();
         }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string m_FileNameAndLocation;
+
+            SaveFileDialog sfdSongs = new SaveFileDialog();
+
+            sfdSongs.ShowDialog();
+
+            m_FileNameAndLocation = sfdSongs.FileName;
+
+            StreamWriter SaveSongs = new StreamWriter(m_FileNameAndLocation);
+
+
+            for (int m_nr = 0; m_nr < nr; m_nr++)
+            {
+                SaveSongs.WriteLine(obSong[m_nr].SongLocation);
+            }
+            SaveSongs.Close();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string m_FileNameAndLocation;
+
+            OpenFileDialog ofdSongs = new OpenFileDialog();
+
+            ofdSongs.ShowDialog();
+
+            m_FileNameAndLocation = ofdSongs.FileName;
+
+            StreamReader openSongs = new StreamReader(m_FileNameAndLocation, true);
+
+           
+
+            while (openSongs.EndOfStream == false)
+            {
+                comboBox1.Text = openSongs.ReadLine();
+            }
+
+            openSongs.Close();
+        }
+
+
+
+
+
+
+
 
        
  
