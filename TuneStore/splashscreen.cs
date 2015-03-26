@@ -12,19 +12,14 @@ namespace TuneStore
 {
     public partial class splashscreen : Form
     {
-      
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         public splashscreen()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-            //player.SoundLocation = @"C:\games\download\muziek\ERA_-_Ameno.wav"; 
-            //player.Load();
-            //player.Play();
-            if (progressBar1.Value > 90)
-            {
-                player.Stop();
-            }
+            player.SoundLocation = @"..\..\muziek\darude.wav";
+            player.Load();
+            player.Play();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -33,7 +28,16 @@ namespace TuneStore
             if (progressBar1.Value == 100)
             {
                 timer1.Stop();
+                timer2.Start();
             }
         }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            player.Stop();
+            timer2.Stop();
+        }
+
+        
     }
 }

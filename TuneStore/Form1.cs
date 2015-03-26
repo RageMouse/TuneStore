@@ -23,7 +23,7 @@ namespace TuneStore
         {
             Thread t = new Thread(new ThreadStart(splashscreen));
             t.Start();
-            Thread.Sleep(10000);
+            Thread.Sleep(7000);
             InitializeComponent();
             t.Abort();
         }
