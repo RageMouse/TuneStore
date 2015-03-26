@@ -46,7 +46,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gbOverlay = new System.Windows.Forms.GroupBox();
-            this.btnStop = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -54,7 +53,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rtbTunes = new System.Windows.Forms.RichTextBox();
-            this.btnPlay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbSong = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -62,6 +60,10 @@
             this.tbTuneLocation = new System.Windows.Forms.TextBox();
             this.tbTuneName = new System.Windows.Forms.TextBox();
             this.sfdSaveAs = new System.Windows.Forms.SaveFileDialog();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gbOverlay.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +79,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(635, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(905, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -190,6 +192,8 @@
             // 
             // gbOverlay
             // 
+            this.gbOverlay.Controls.Add(this.textBox1);
+            this.gbOverlay.Controls.Add(this.btnSearch);
             this.gbOverlay.Controls.Add(this.btnStop);
             this.gbOverlay.Controls.Add(this.label5);
             this.gbOverlay.Controls.Add(this.label4);
@@ -207,19 +211,9 @@
             this.gbOverlay.Controls.Add(this.tbTuneName);
             this.gbOverlay.Location = new System.Drawing.Point(13, 29);
             this.gbOverlay.Name = "gbOverlay";
-            this.gbOverlay.Size = new System.Drawing.Size(610, 221);
+            this.gbOverlay.Size = new System.Drawing.Size(892, 415);
             this.gbOverlay.TabIndex = 1;
             this.gbOverlay.TabStop = false;
-            // 
-            // btnStop
-            // 
-            this.btnStop.Location = new System.Drawing.Point(326, 93);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(97, 23);
-            this.btnStop.TabIndex = 14;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // label5
             // 
@@ -277,19 +271,9 @@
             this.rtbTunes.Location = new System.Drawing.Point(9, 143);
             this.rtbTunes.Name = "rtbTunes";
             this.rtbTunes.ReadOnly = true;
-            this.rtbTunes.Size = new System.Drawing.Size(590, 72);
+            this.rtbTunes.Size = new System.Drawing.Size(311, 196);
             this.rtbTunes.TabIndex = 7;
             this.rtbTunes.Text = "";
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.Location = new System.Drawing.Point(223, 93);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(96, 23);
-            this.btnPlay.TabIndex = 6;
-            this.btnPlay.Text = "Play";
-            this.btnPlay.UseVisualStyleBackColor = true;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // label1
             // 
@@ -344,13 +328,51 @@
             this.tbTuneName.TabIndex = 0;
             this.tbTuneName.Text = "Tune Name.";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(9, 360);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 15;
+            this.btnSearch.Text = "Search.";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 389);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(311, 20);
+            this.textBox1.TabIndex = 16;
+            // 
+            // btnStop
+            // 
+            this.btnStop.Image = global::TuneStore.Properties.Resources._9iRR9b54T6;
+            this.btnStop.Location = new System.Drawing.Point(397, 345);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(65, 64);
+            this.btnStop.TabIndex = 14;
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Image = global::TuneStore.Properties.Resources._9iRR9b54T3;
+            this.btnPlay.Location = new System.Drawing.Point(326, 345);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(65, 64);
+            this.btnPlay.TabIndex = 6;
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 262);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(905, 456);
             this.Controls.Add(this.gbOverlay);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -399,6 +421,8 @@
         private System.Windows.Forms.SaveFileDialog sfdSaveAs;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

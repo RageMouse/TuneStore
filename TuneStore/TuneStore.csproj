@@ -94,6 +94,27 @@
   <ItemGroup>
     <None Include="Resources\qce9oP7.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9iRR9b54T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9iRR9b54T1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9iRR9b54T2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9iRR9b54T3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9iRR9b54T4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9iRR9b54T5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9iRR9b54T6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
