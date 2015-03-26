@@ -235,7 +235,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(519, 46);
+            this.textBox2.Location = new System.Drawing.Point(520, 47);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(80, 20);
             this.textBox2.TabIndex = 11;
@@ -243,7 +243,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(425, 23);
+            this.label3.Location = new System.Drawing.Point(427, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 10;
@@ -252,7 +252,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(428, 46);
+            this.comboBox1.Location = new System.Drawing.Point(430, 46);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(84, 21);
             this.comboBox1.TabIndex = 9;
@@ -286,14 +286,14 @@
             // 
             // tbSong
             // 
-            this.tbSong.Location = new System.Drawing.Point(7, 96);
+            this.tbSong.Location = new System.Drawing.Point(9, 96);
             this.tbSong.Name = "tbSong";
             this.tbSong.Size = new System.Drawing.Size(210, 20);
             this.tbSong.TabIndex = 4;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(326, 45);
+            this.btnAdd.Location = new System.Drawing.Point(328, 45);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(96, 23);
             this.btnAdd.TabIndex = 3;
@@ -303,7 +303,7 @@
             // 
             // btnSet
             // 
-            this.btnSet.Location = new System.Drawing.Point(223, 45);
+            this.btnSet.Location = new System.Drawing.Point(225, 44);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(97, 23);
             this.btnSet.TabIndex = 2;
@@ -312,7 +312,7 @@
             // 
             // tbTuneLocation
             // 
-            this.tbTuneLocation.Location = new System.Drawing.Point(7, 47);
+            this.tbTuneLocation.Location = new System.Drawing.Point(9, 47);
             this.tbTuneLocation.Name = "tbTuneLocation";
             this.tbTuneLocation.ReadOnly = true;
             this.tbTuneLocation.Size = new System.Drawing.Size(210, 20);
@@ -321,10 +321,10 @@
             // 
             // tbTuneName
             // 
-            this.tbTuneName.Location = new System.Drawing.Point(7, 20);
+            this.tbTuneName.Location = new System.Drawing.Point(9, 20);
             this.tbTuneName.Name = "tbTuneName";
             this.tbTuneName.ReadOnly = true;
-            this.tbTuneName.Size = new System.Drawing.Size(412, 20);
+            this.tbTuneName.Size = new System.Drawing.Size(415, 20);
             this.tbTuneName.TabIndex = 0;
             this.tbTuneName.Text = "Tune Name.";
             // 
