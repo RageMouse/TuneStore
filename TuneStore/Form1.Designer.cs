@@ -34,6 +34,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,6 @@
             this.tbTuneLocation = new System.Windows.Forms.TextBox();
             this.tbTuneName = new System.Windows.Forms.TextBox();
             this.sfdSaveAs = new System.Windows.Forms.SaveFileDialog();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.gbOverlay.SuspendLayout();
             this.SuspendLayout();
@@ -92,11 +92,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
-
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // fileToolStripMenuItem
@@ -111,13 +107,16 @@
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-
             this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-
             this.saveAsToolStripMenuItem.Text = "Save as...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -130,11 +129,7 @@
             // playlistToolStripMenuItem
             // 
             this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
-
             this.playlistToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-
-            this.playlistToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-
             this.playlistToolStripMenuItem.Text = "Playlist.";
             // 
             // viewToolStripMenuItem
@@ -148,11 +143,7 @@
             // playlistsToolStripMenuItem
             // 
             this.playlistsToolStripMenuItem.Name = "playlistsToolStripMenuItem";
-
             this.playlistsToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-
-            this.playlistsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-
             this.playlistsToolStripMenuItem.Text = "Playlists.";
             // 
             // toolsToolStripMenuItem
@@ -219,7 +210,6 @@
             this.gbOverlay.Size = new System.Drawing.Size(610, 221);
             this.gbOverlay.TabIndex = 1;
             this.gbOverlay.TabStop = false;
-
             // 
             // btnStop
             // 
@@ -353,13 +343,6 @@
             this.tbTuneName.Size = new System.Drawing.Size(412, 20);
             this.tbTuneName.TabIndex = 0;
             this.tbTuneName.Text = "Tune Name.";
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // Form1
             // 
