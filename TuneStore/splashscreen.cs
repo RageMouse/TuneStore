@@ -18,9 +18,9 @@ namespace TuneStore
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-            player.SoundLocation = @"C:\games\download\muziek\ERA_-_Ameno.wav";
-            player.Load();
-            player.Play();
+            //player.SoundLocation = @"C:\games\download\muziek\ERA_-_Ameno.wav";
+            //player.Load();
+            //player.Play();
             if (progressBar1.Value > 90)
             {
                 player.Stop();
