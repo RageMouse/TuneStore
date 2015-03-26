@@ -92,11 +92,11 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-<<<<<<< HEAD
+
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
-=======
+
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
->>>>>>> origin/master
+
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // fileToolStripMenuItem
@@ -111,11 +111,11 @@
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-<<<<<<< HEAD
+
             this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-=======
+
             this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
->>>>>>> origin/master
+
             this.saveAsToolStripMenuItem.Text = "Save as...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
@@ -130,11 +130,11 @@
             // playlistToolStripMenuItem
             // 
             this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
-<<<<<<< HEAD
+
             this.playlistToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-=======
+
             this.playlistToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
->>>>>>> origin/master
+
             this.playlistToolStripMenuItem.Text = "Playlist.";
             // 
             // viewToolStripMenuItem
@@ -148,11 +148,11 @@
             // playlistsToolStripMenuItem
             // 
             this.playlistsToolStripMenuItem.Name = "playlistsToolStripMenuItem";
-<<<<<<< HEAD
+
             this.playlistsToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-=======
+
             this.playlistsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
->>>>>>> origin/master
+
             this.playlistsToolStripMenuItem.Text = "Playlists.";
             // 
             // toolsToolStripMenuItem
@@ -219,10 +219,7 @@
             this.gbOverlay.Size = new System.Drawing.Size(610, 221);
             this.gbOverlay.TabIndex = 1;
             this.gbOverlay.TabStop = false;
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/master
+
             // 
             // btnStop
             // 
