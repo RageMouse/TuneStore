@@ -109,6 +109,13 @@ namespace TuneStore.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap giphy {
+            get {
+                object obj = ResourceManager.GetObject("giphy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap qce9oP7 {
             get {
                 object obj = ResourceManager.GetObject("qce9oP7", resourceCulture);

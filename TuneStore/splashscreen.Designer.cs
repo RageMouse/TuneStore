@@ -38,7 +38,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(3, 208);
+            this.progressBar1.Location = new System.Drawing.Point(-5, 208);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(141, 29);
             this.progressBar1.TabIndex = 1;
@@ -53,9 +53,9 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::TuneStore.Properties.Resources.qce9oP7;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(-5, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(797, 240);
+            this.pictureBox1.Size = new System.Drawing.Size(794, 240);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 233);
+            this.ClientSize = new System.Drawing.Size(788, 233);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
