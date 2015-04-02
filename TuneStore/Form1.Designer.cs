@@ -46,6 +46,11 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gbOverlay = new System.Windows.Forms.GroupBox();
+            this.trackWave = new System.Windows.Forms.TrackBar();
+            this.lbltuneposition = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -53,6 +58,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rtbTunes = new System.Windows.Forms.RichTextBox();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbSong = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -60,12 +66,10 @@
             this.tbTuneLocation = new System.Windows.Forms.TextBox();
             this.tbTuneName = new System.Windows.Forms.TextBox();
             this.sfdSaveAs = new System.Windows.Forms.SaveFileDialog();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.btnPlay = new System.Windows.Forms.Button();
+            this.ofdSongs = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.gbOverlay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackWave)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -79,7 +83,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(905, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(510, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,14 +92,15 @@
             this.tSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.tSToolStripMenuItem.Name = "tSToolStripMenuItem";
-            this.tSToolStripMenuItem.Size = new System.Drawing.Size(34, 21);
+            this.tSToolStripMenuItem.Size = new System.Drawing.Size(32, 20);
             this.tSToolStripMenuItem.Text = "TS";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // fileToolStripMenuItem
             // 
@@ -103,20 +108,20 @@
             this.saveAsToolStripMenuItem,
             this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.saveAsToolStripMenuItem.Text = "Save as...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -125,13 +130,13 @@
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playlistToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(42, 21);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // playlistToolStripMenuItem
             // 
             this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
-            this.playlistToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.playlistToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.playlistToolStripMenuItem.Text = "Playlist.";
             // 
             // viewToolStripMenuItem
@@ -139,13 +144,13 @@
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playlistsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // playlistsToolStripMenuItem
             // 
             this.playlistsToolStripMenuItem.Name = "playlistsToolStripMenuItem";
-            this.playlistsToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.playlistsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.playlistsToolStripMenuItem.Text = "Playlists.";
             // 
             // toolsToolStripMenuItem
@@ -154,19 +159,19 @@
             this.loadDefaultStockToolStripMenuItem,
             this.clearDefaultToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // loadDefaultStockToolStripMenuItem
             // 
             this.loadDefaultStockToolStripMenuItem.Name = "loadDefaultStockToolStripMenuItem";
-            this.loadDefaultStockToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.loadDefaultStockToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.loadDefaultStockToolStripMenuItem.Text = "Load Default Stock.";
             // 
             // clearDefaultToolStripMenuItem
             // 
             this.clearDefaultToolStripMenuItem.Name = "clearDefaultToolStripMenuItem";
-            this.clearDefaultToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.clearDefaultToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.clearDefaultToolStripMenuItem.Text = "Clear Default.";
             // 
             // helpToolStripMenuItem
@@ -175,23 +180,25 @@
             this.aboutToolStripMenuItem,
             this.helpToolStripMenuItem1});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.aboutToolStripMenuItem.Text = "About.";
             // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
             this.helpToolStripMenuItem1.Text = "Help.";
             // 
             // gbOverlay
             // 
+            this.gbOverlay.Controls.Add(this.trackWave);
+            this.gbOverlay.Controls.Add(this.lbltuneposition);
             this.gbOverlay.Controls.Add(this.textBox1);
             this.gbOverlay.Controls.Add(this.btnSearch);
             this.gbOverlay.Controls.Add(this.btnStop);
@@ -211,14 +218,57 @@
             this.gbOverlay.Controls.Add(this.tbTuneName);
             this.gbOverlay.Location = new System.Drawing.Point(13, 29);
             this.gbOverlay.Name = "gbOverlay";
-            this.gbOverlay.Size = new System.Drawing.Size(892, 415);
+            this.gbOverlay.Size = new System.Drawing.Size(495, 415);
             this.gbOverlay.TabIndex = 1;
             this.gbOverlay.TabStop = false;
+            // 
+            // trackWave
+            // 
+            this.trackWave.Location = new System.Drawing.Point(328, 294);
+            this.trackWave.Name = "trackWave";
+            this.trackWave.Size = new System.Drawing.Size(134, 45);
+            this.trackWave.TabIndex = 18;
+            this.trackWave.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // lbltuneposition
+            // 
+            this.lbltuneposition.AutoSize = true;
+            this.lbltuneposition.Location = new System.Drawing.Point(786, 389);
+            this.lbltuneposition.Name = "lbltuneposition";
+            this.lbltuneposition.Size = new System.Drawing.Size(0, 13);
+            this.lbltuneposition.TabIndex = 17;
+            this.lbltuneposition.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 389);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(311, 20);
+            this.textBox1.TabIndex = 16;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(9, 360);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 15;
+            this.btnSearch.Text = "Search.";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnStop
+            // 
+            this.btnStop.Image = global::TuneStore.Properties.Resources._9iRR9b54T6;
+            this.btnStop.Location = new System.Drawing.Point(397, 345);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(65, 64);
+            this.btnStop.TabIndex = 14;
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(516, 80);
+            this.label5.Location = new System.Drawing.Point(371, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 13;
@@ -227,7 +277,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(516, 23);
+            this.label4.Location = new System.Drawing.Point(371, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 12;
@@ -235,7 +285,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(520, 47);
+            this.textBox2.Location = new System.Drawing.Point(371, 87);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(80, 20);
             this.textBox2.TabIndex = 11;
@@ -243,7 +293,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(427, 23);
+            this.label3.Location = new System.Drawing.Point(225, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 10;
@@ -252,9 +302,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(430, 46);
+            this.comboBox1.Location = new System.Drawing.Point(225, 86);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(84, 21);
+            this.comboBox1.Size = new System.Drawing.Size(140, 21);
             this.comboBox1.TabIndex = 9;
             // 
             // label2
@@ -275,10 +325,20 @@
             this.rtbTunes.TabIndex = 7;
             this.rtbTunes.Text = "";
             // 
+            // btnPlay
+            // 
+            this.btnPlay.Image = global::TuneStore.Properties.Resources._9iRR9b54T3;
+            this.btnPlay.Location = new System.Drawing.Point(326, 345);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(65, 64);
+            this.btnPlay.TabIndex = 6;
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 80);
+            this.label1.Location = new System.Drawing.Point(9, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 5;
@@ -286,16 +346,16 @@
             // 
             // tbSong
             // 
-            this.tbSong.Location = new System.Drawing.Point(9, 96);
+            this.tbSong.Location = new System.Drawing.Point(9, 86);
             this.tbSong.Name = "tbSong";
             this.tbSong.Size = new System.Drawing.Size(210, 20);
             this.tbSong.TabIndex = 4;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(328, 45);
+            this.btnAdd.Location = new System.Drawing.Point(344, 45);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(96, 23);
+            this.btnAdd.Size = new System.Drawing.Size(109, 23);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -305,10 +365,11 @@
             // 
             this.btnSet.Location = new System.Drawing.Point(225, 44);
             this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(97, 23);
+            this.btnSet.Size = new System.Drawing.Size(113, 23);
             this.btnSet.TabIndex = 2;
             this.btnSet.Text = "Set";
             this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
             // 
             // tbTuneLocation
             // 
@@ -324,63 +385,33 @@
             this.tbTuneName.Location = new System.Drawing.Point(9, 20);
             this.tbTuneName.Name = "tbTuneName";
             this.tbTuneName.ReadOnly = true;
-            this.tbTuneName.Size = new System.Drawing.Size(415, 20);
+            this.tbTuneName.Size = new System.Drawing.Size(444, 20);
             this.tbTuneName.TabIndex = 0;
             this.tbTuneName.Text = "Tune Name.";
             // 
-            // btnSearch
+            // ofdSongs
             // 
-            this.btnSearch.Location = new System.Drawing.Point(9, 360);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 15;
-            this.btnSearch.Text = "Search.";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(9, 389);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(311, 20);
-            this.textBox1.TabIndex = 16;
-            // 
-            // btnStop
-            // 
-            this.btnStop.Image = global::TuneStore.Properties.Resources._9iRR9b54T6;
-            this.btnStop.Location = new System.Drawing.Point(397, 345);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(65, 64);
-            this.btnStop.TabIndex = 14;
-            this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.Image = global::TuneStore.Properties.Resources._9iRR9b54T3;
-            this.btnPlay.Location = new System.Drawing.Point(326, 345);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(65, 64);
-            this.btnPlay.TabIndex = 6;
-            this.btnPlay.UseVisualStyleBackColor = true;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            this.ofdSongs.FileName = "openFileDialog1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(905, 456);
+            this.ClientSize = new System.Drawing.Size(510, 456);
             this.Controls.Add(this.gbOverlay);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "TuneStore";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.gbOverlay.ResumeLayout(false);
             this.gbOverlay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackWave)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,6 +454,9 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.OpenFileDialog ofdSongs;
+        private System.Windows.Forms.Label lbltuneposition;
+        private System.Windows.Forms.TrackBar trackWave;
     }
 }
 
