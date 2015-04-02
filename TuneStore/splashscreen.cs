@@ -13,6 +13,7 @@ namespace TuneStore
     public partial class splashscreen : Form
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+        
         public splashscreen()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace TuneStore
             player.SoundLocation = @"..\..\muziek\darude.wav";
             player.Load();
             player.Play();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
